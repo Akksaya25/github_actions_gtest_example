@@ -24,9 +24,9 @@ class AutoTempRegulator{
 };
 template <typename T>
 ITempSensor* createObject();
-template <>
+
 ITempSensor* createObject<ModelATempSensor>() { return new ModelATempSensor(); }
-template <>
+
 ITempSensor* createObject<ModelBTempSensor>() { return new ModelATempSensor(); }
 
 template <typename T>
