@@ -9,15 +9,16 @@ class DivFunTestSuite:public testing::TestWithParam<std::tuple<int,int,int>>{
     DivFunTestSuite(){}
     ~DivFunTestSuite(){}
 
-}
-TEST(DivFunTestSuite,HandleValidInputs){
-    int numerator=10;
-    int denominator=5;
-    int expectedValue=2;
-    int actualValue=divFun(numerator,denominator);
-    ASSERT_EQ(actualValue,expectedValue)
+};
+TEST_P(DivFuncTestSuite, HandleInputs){
+    int numerator = std::get<0>(GetParam());
+    int denominator = std::get<1>(GetParam());
+    int expectedValue = std::get<2>(GetParam());
+    int actualValue = divFunc(numerator, denominator);
+    ASSERT_EQ(actualValue, expectedValue);
 
 }
+
 INSTANTIATE_TEST_SUITE_P(
     DivFunTestSuiteParameterExample,
     DivFunTestSuite,
