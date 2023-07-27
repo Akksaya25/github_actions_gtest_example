@@ -17,9 +17,6 @@ class B{
 
 };
 
-
-
-
 class A{
 
     B* ptr;
@@ -27,9 +24,6 @@ class A{
     public:
 
     A(B* addressOfObject): ptr{addressOfObject}{
-
-
-
 
     }
 
@@ -40,9 +34,6 @@ class A{
     }
 
 };
-
-
-
 
 TEST(TestFixtureTestSuite,OperationTrueTest){
 
@@ -73,9 +64,5 @@ TEST(TestFixtureTestSuite,OperationFalseTest){
     //Act and Assert
 
     ASSERT_FALSE(obj.operation());
-
-
-
-
 
 }
