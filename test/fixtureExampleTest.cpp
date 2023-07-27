@@ -25,7 +25,7 @@ TEST("TestFixtureTestSuite","OperationTest"){
     //Act and Assert
     Assert_TRUE(obj.operation());
 }
-TEST("TestFixtureTestSuite","OperationTest"){
+TEST(TestFixtureTestSuite,OperationTest){
     C cobj;
     B bobj(&cobj);
     A obj(&bobj);
